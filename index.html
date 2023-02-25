@@ -1,0 +1,170 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+
+
+<head>
+     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+
+     <title>Timothy Cutts Resume</title>
+
+     <style type="text/css">
+        * { margin: 0; padding: 0; }
+        body { font: 16px Helvetica, Sans-Serif; line-height: 24px; background: url(noise.jpg); }
+        .clear { clear: both; }
+        #page-wrap { width: 800px; margin: 40px auto 60px; }
+        #pic { float: right; margin: -30px 0 0 0; }
+        h1 { margin: 0 0 16px 0; padding: 0 0 16px 0; font-size: 42px; font-weight: bold; letter-spacing: -2px; border-bottom: 1px solid rgb(0, 0, 0); }
+        h2 { font-size: 20px; margin: 0 0 6px 0; position: relative; }
+        h2 span { position: absolute; bottom: 0; right: 0; font-style: italic; font-family: Georgia, Serif; font-size: 16px; color: rgb(0, 0, 0); font-weight: normal; }
+        p { margin: 0 0 16px 0; }
+        a { color: rgb(0, 0, 0); text-decoration: none; border-bottom: 1px dotted rgb(0, 0, 0); }
+        a:hover { border-bottom-style: solid; color: black; }
+        ul { margin: 0 0 32px 17px; }
+        #objective { width: 500px; float: left; }
+        #objective p { font-family: Georgia, Serif; font-style: italic; color: rgb(0, 0, 0); }
+        dt { font-style: italic; font-weight: bold; font-size: 18px; text-align: right; padding: 0 26px 0 0; width: 150px; float: left; height: 100px; border-right: 2px solid rgb(0, 0, 0);  }
+        dd { width: 600px; float: right; }
+        dd.clear { float: none; margin: 0; height: 15px; }
+     </style>
+</head>
+
+<body>
+
+    <div id="page-wrap">
+        
+        <img src="TimC.png" alt="Photo of Timothy" id="pic" />
+        
+    
+        <div id="contact-info">
+        
+            
+        
+            <h1 class="fn">Timothy Cutts</h1>
+            <p><strong>Site Visits: </strong><span id="hits", ></span></p>
+            <p>
+                
+                Email: <a class="email" href="mailto:tcutts713@gmail.com">tcutts713@gmail.com</a>
+            </p>
+        </div>
+                
+        <div id="objective">
+            <p>
+                Motivated IT Cloud Computing Associates degree with customer service, AWS Certified Solutions
+                Architect, management and training experience seeks entry-level IT Cloud Computing position. 
+            </p>
+
+            
+        </div>
+        
+        <div class="clear"></div>
+        
+        <dl>
+
+
+            <dd class="clear"></dd>
+            
+            <dt>Certifications</dt>
+            <dd>
+                <p>AWS Certified Solutions Architect- Associate (SAA) 9K7XLYVKTEB1QW3C – Nov 2022 - Nov 2025</p>
+            </dd>
+
+            <dd class="clear"></dd>
+            
+            <dt>Skills</dt>
+
+            <dd>
+                
+                <p>Customer service excellence, Experience leading, building, and training a team, 
+                   Effective communication, problem solving and organization, Amazon Web Services (S3, Lambda, DynamoDb, Amplify, API Gateway, EC2),
+                   Python, Terraform, Web Programming, MS Office,
+                   Adobe Photoshop & Illustrator </p>
+                
+            </dd>
+            
+            <dd class="clear"></dd>
+        
+            <dt>Education</dt>
+            <dd>
+                <h2><a href="https://www.macomb.edu/">Macomb Community College, Warren, MI</a></h2>
+                <p>Associate of Applied Science in Information Technology – Cloud Computing, 2022 Summa Cum Laude</p>
+            </dd>
+
+            <dd class="clear"></dd>
+
+            
+            <dt>Relevant Coursework</dt>
+            <dd>
+                
+                <p>Python with Boto3 Programming, Cloud Administrator Principles 1, 2 & 3, Cloud Developer Principles 1 & 2, 
+                   Information Systems Security, Introduction to Linux, Introduction to Program Design & Development, 
+                   Principles of Networking, Web Programming</p>
+    
+            </dd>
+
+            <dd class="clear"></dd>
+
+            <dt>Experience</dt>
+            <dd>
+                <h2><a href="https://www.flipspotgym.com/">fLipSpot Gymnastics</a><span>Director - Rochester Hills, Mi - 2010-2019</span></h2>
+                <ul>
+                    <li>Customer service</li>
+                    <li>Designed and coached programs for tumbling, parkour, boy’s gymnastics, trampoline, adult,
+                        and special needs open gyms </li>
+                    <li>Managed Rochester Hills location, hired and trained new coaches </li>
+                    <li>Designed equipment layout and logos for events</li>
+                </ul>
+                
+                <h2><a href="https://www.facebook.com/AmericanParkour/">American Parkour</a><span>Product design - Washington DC - 2015-2018</span></h2>
+                <ul>
+                    <li>Created logos and designed artwork for clothing</li>
+                    <li>Helped organize events and build obstacles for events</li>
+                </ul> 
+            </dd>
+            
+            <dd class="clear"></dd>
+            
+            <dt>Hobbies</dt>
+            <dd>Learning new programming concepts, Disc Golf, Capoeira, Hiking, & Digital Art  </dd>
+            
+            <dd class="clear"></dd>
+            
+            <dt>References</dt>
+            <dd>Available on request</dd>
+            
+            <dd class="clear"></dd>
+        </dl>
+        
+        <div class="clear"></div>
+    
+    </div>
+
+    <body onload="updateCounter()">
+    <script>
+    function updateCounter(){
+        fetch('https://y3y44bmjld.execute-api.us-east-1.amazonaws.com/test',{
+            method: 'GET'
+        })
+      .then(response => {
+        if (
+            // check if response's status is 200
+            response.ok
+        ) {
+          return response.json()
+        } else {
+          throw new Error('something went wrong');
+        }
+      })
+      .then(data => document.getElementById("hits").innerText = data.body)
+    }
+    </script>
+    <!-- <h4><a href="snakegame.html">Play snake game</a> </h4> -->
+    Visits: <span id="hits"></span>
+
+    
+
+
+</body>
+
+
+</html>
