@@ -34,7 +34,7 @@ resource "aws_cloudfront_distribution" "s3_distribution" {
     max_ttl                = 86400
   }
   viewer_certificate {
-    acm_certificate_arn = "arn:aws:acm:us-east-1:443266872301:certificate/24eebc86-d65c-4829-ab69-83a9544d99ee"
+    acm_certificate_arn = "<BLOCKED ARN>"
     ssl_support_method  = "sni-only"
   }
   price_class = "PriceClass_200"
